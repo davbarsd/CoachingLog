@@ -1,9 +1,10 @@
 package CoachingLog;
+
 /**
  * Lift.java
  * 
- * Parent class for the three lifts (Bench, Squat, Deadlift).
- * Holds the percentage breakdown and Epley formula for calculating one-rep max
+ * Parent class for the three lifts (Bench, Squat, Deadlift). Holds the
+ * percentage breakdown and Epley formula for calculating one-rep max
  * 
  * @author David Barron
  */
@@ -29,11 +30,11 @@ public abstract class Lift {
 	}
 
 	/**
-	 * Calculate the projected one-rm using Epley formula.
-	 * 1RM = weight * (1 + reps / 30).
+	 * Calculate the projected one-rm using Epley formula. 1RM = weight * (1 + reps
+	 * / 30).
 	 * 
 	 * @param weight the weight lifted in pounds
-	 * @param reps the number of reps performed
+	 * @param reps   the number of reps performed
 	 * @return thr projected one-rep max in poinds
 	 */
 	// LO 3: Writes a method with params.
@@ -41,8 +42,7 @@ public abstract class Lift {
 		// return the formula result
 		return weight * (1 + reps / 30.0);
 	}
-	
-	
+
 	/**
 	 * Returns the name of lift
 	 * 
@@ -67,7 +67,7 @@ public abstract class Lift {
 		}
 		System.out.println(); // blank line
 	}
-	
+
 	/**
 	 * Builds the percentage table for GUI.
 	 * 
