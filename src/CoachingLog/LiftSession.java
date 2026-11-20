@@ -27,5 +27,18 @@ public class LiftSession {
             total += sets.get(i).getVolume();
         }
         return total;
+    }
+
+    public double getBestEstimated1RM() {
+        double best1RM = 0.0;
+        for (int i = 0; i < sets.size(); i++) {
+            double estimate = lift.calculate1RM(sets.get(i).getWeight(), sets.get(i).getActualReps());
+            if (estimate > best1RM && sets.get(i).getActualReps() > 0) {
+                best1RM = estimate;
+            }
+        }
+        return best1RM;
+            
+
 
 }
