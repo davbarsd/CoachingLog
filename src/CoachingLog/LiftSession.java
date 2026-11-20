@@ -38,7 +38,6 @@ public class LiftSession {
             }
         }
         return best1RM;
-            
-
+    }
 
 }
