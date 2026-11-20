@@ -21,4 +21,11 @@ public class LiftSession {
         return sets;
     }
 
+    public double getTotalVolume() {
+        double total = 0.0;
+        for (int i = 0; i < sets.size(); i++) {
+            total += sets.get(i).getVolume();
+        }
+        return total;
+
 }
