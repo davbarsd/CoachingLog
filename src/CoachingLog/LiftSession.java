@@ -7,7 +7,10 @@ public class LiftSession {
     private String date;
     private ArrayList<LoggedSet> sets;
 
-    public LiftSession(Lift lift, String date) {
+    public LiftSession(Lift lift, String date) throws InvalidEntryException {
+        if (lift == null || date == null || date.isBlank()) {
+            throw new InvalidEntryException("Lift and date cannot be null or empty.");
+        }
         this.lift = lift;
         this.date = date;
         this.sets = new ArrayList<LoggedSet>();
@@ -19,6 +22,14 @@ public class LiftSession {
 
     public ArrayList<LoggedSet> getSets() {
         return sets;
+    }
+
+    public Lift getLift() {
+        return lift;
+    }
+
+    public String getDate() {
+        return date;
     }
 
     public double getTotalVolume() {
@@ -38,6 +49,7 @@ public class LiftSession {
             }
         }
         return best1RM;
+
     }
 
 }
